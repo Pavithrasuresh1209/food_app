@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link your CSS here -->
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+        .success-message {
+            font-size: 3em; /* Huge font size */
+            color: green; /* Success color */
+        }
+        .order-amount {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #007bff; /* Blue color for the amount */
+        }
+        .go-back-button {
+            padding: 10px 20px;
+            background-color: #007bff; /* Blue background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .go-back-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="success-message">Payment Successful! 🎉</h1>
+    <p class="order-amount"></p>
+    <p>Come again for other chill orders!</p>
+    <button class="go-back-button" onclick="goBack()">Go Back</button>
+
+    <script>
+        // Retrieve the order amount from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderAmount = urlParams.get('amount');
+
+        document.querySelector('.order-amount').textContent = `Your order amount is: $${orderAmount}`;
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

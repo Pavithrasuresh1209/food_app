@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Order Successful</title>
+</head>
+<body>
+    <div class="success-container">
+        <h1>Order Successful😻!</h1>
+        <p>Your order has been placed successfully. Thank you for order with us!Eat and have fun🤠</p>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            
+
+        <div class="customer-info">
+            <h2>Shipping Information</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Address:</strong> 1234 Elm Street, Springfield, USA</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+        </div>
+
+        <button class="success-button" onclick="window.location.href='index.html'">Go to Home</button>
+    </div>
+
+    <footer>
+        <p>© 2024 Your Website. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="terms.html">Terms & Conditions</a></p>
+    </footer>
+
+    <script>
+        // Retrieve the total amount from localStorage and display it
+        const totalAmount = localStorage.getItem('totalAmount');
+        document.getElementById('total-amount').textContent = `$${totalAmount}`;
+    </script>
+</body>
+</html>

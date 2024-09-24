@@ -1,0 +1,123 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* Colors */
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #3b141c;
+  --secondary-color: #f3961c;
+  --light-pink-color: #faf4f5;
+  --medium-gray-color: #ccc;
+
+  /* Font size */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+
+  /* Font weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Border radius */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  /* Site max width */
+  --site-max-width: 1300px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+  background-color: #f0f4f8; /* Light gray background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff; /* White background for the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 30px;
+  text-align: center;
+  width: 300px; /* Fixed width for the container */
+}
+
+h1 {
+  color: #333; /* Dark gray for the title */
+  margin-bottom: 20px;
+}
+
+.confirmation-message {
+  font-size: 1.5em; /* Larger font for the confirmation message */
+  color: #28a745; /* Green color for success */
+  margin-bottom: 10px;
+}
+
+#orderAmount {
+  font-weight: bold;
+  color: #007bff; /* Blue color for the amount */
+  font-size: 1.2em; /* Slightly larger font size */
+}
+
+.go-back-button {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.go-back-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Additional Styles for Responsiveness */
+@media screen and (max-width: 640px) {
+  .container {
+    width: 90%; /* Full width on smaller screens */
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5em; /* Adjust heading size */
+  }
+
+  .confirmation-message {
+    font-size: 1.2em; /* Adjust confirmation message size */
+  }
+
+  #orderAmount {
+    font-size: 1.1em; /* Adjust order amount size */
+  }
+
+  .go-back-button {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 0.9em; /* Adjust button font size */
+  }
+}
